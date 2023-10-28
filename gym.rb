@@ -16,11 +16,11 @@ end
 
 if scrape_success
   cleaned_data = response.body.split('var data = ')[1].split(';')[0]
-  cleaned_data = cleaned_data.gsub("'", '"')
-                             .gsub("\n", '')
-                             .gsub(" ", '')
-                             .gsub(":&nbsp", ' ')
-                             .gsub("},}", '}}')
+                              .gsub("'", '"')
+                              .gsub("\n", '')
+                              .gsub(" ", '')
+                              .gsub(":&nbsp", ' ')
+                              .gsub("},}", '}}')
   json = JSON.parse(cleaned_data)
 
   puts "Gottingen:   #{json['SBG']['count']} / #{json['SBG']['capacity']}"
