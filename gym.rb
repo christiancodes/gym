@@ -36,6 +36,7 @@ if scrape_success
 
   puts "Gottingen:   #{json['SBG']['count']} / #{json['SBG']['capacity']}"
   puts "Bayers Lake: #{json['SBL']['count']} / #{json['SBL']['capacity']}"
+  puts "Dartmouth:   #{json['SBD']['count']} / #{json['SBD']['capacity']}"
   puts "Closes at: #{closes_at}"
 else
   puts "Error getting gym numbers!"
